@@ -1,7 +1,6 @@
 package win.zqxu.test.spring.entity.history;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +10,7 @@ public class AutoIdController {
   @Autowired
   private AutoIdRepository repo;
 
-  @PostMapping
+  @RequestMapping
   public AutoIdEntity create() {
     AutoIdEntity entity = new AutoIdEntity();
     entity.setCounter(1);
